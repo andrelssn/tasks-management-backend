@@ -83,4 +83,4 @@ pytest -q
 - A cada git push:
   - Instala dependências
   - Roda testes (pytest)
-  - Prepara aplicação para deploy no GCP/AWS
+  - Prepara aplicação para deploy no GCP
