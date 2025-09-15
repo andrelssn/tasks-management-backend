@@ -6,6 +6,11 @@ from .crud import get_tasks, get_task, create_task, update_task, delete_task
 
 app = FastAPI(title="Tasks API - FastAPI + SQLite")
 
+from sqlmodel import SQLModel, create_engine
+
+DATABASE_URL = "sqlite:///tmp/database.db"
+engine = create_engine(DATABASE_URL)
+
 @app.on_event("startup")
 def on_startup():
     init_db()
